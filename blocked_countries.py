@@ -33,13 +33,13 @@ class BlockedCountries:
         console_clear()
         
         # Получение разрешении на просмотр IP пользователя
-        _user_permission: str = input(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["RED"]}?{COLOR_CODE["CYAN"]}] {COLOR_CODE["LI_G"]}' + 
+        _user_permission: str = input(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["CYAN"]}?{COLOR_CODE["BLUE"]}] {COLOR_CODE["LI_G"]}' + 
             f'Разрешите увидеть ваш IP-адрес для проверки {COLOR_CODE["DARK"]}(Да - 1 / Нет - 0): {COLOR_CODE["RESET"]}').strip()
     
         sleep(1.7)
         # Доступ разрешен
         if not _user_permission or _user_permission == "1": 
-            print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[%] {COLOR_CODE["LI_G"]}'
+            print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[%] {COLOR_CODE["LI_G"]}'
             f'Производиться проверка технической части..{COLOR_CODE["RESET"]}')
 
             sleep(2)        
@@ -49,20 +49,20 @@ class BlockedCountries:
 
             # Если страна имееться в списке заблокированных стран
             if ip_county in self.__country:
-                print(f'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}[!] '+
-                    f'{COLOR_CODE["RED"]}К сожалению, наш сервис недоступен в вашей стране {COLOR_CODE["RESET"]}({ip_county}){COLOR_CODE["DARK"]}, воспользуйтесь VPN`ом для получении доступа к ресурсам.')
+                print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[!] '+
+                    f'{COLOR_CODE["CYAN"]}К сожалению, наш сервис недоступен в вашей стране {COLOR_CODE["RESET"]}({ip_county}){COLOR_CODE["DARK"]}, воспользуйтесь VPN`ом для получении доступа к ресурсам.')
                 
                 sleep(1.7)
 
             # Отстутствует интеренет соединение
             if ip_data.get("status_error"):
-                print(f'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}[!] '+
-                    f'{COLOR_CODE["RED"]}К сожалению, у вас {COLOR_CODE["RESET"]}отсутствует {COLOR_CODE["RED"]}интернет соединение')
+                print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[!] '+
+                    f'{COLOR_CODE["CYAN"]}К сожалению, у вас {COLOR_CODE["RESET"]}отсутствует {COLOR_CODE["BLUE"]}интернет соединение')
                 
                 sleep(1.7)
 
             else:
-                print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[*] {COLOR_CODE["LI_G"]}'
+                print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[*] {COLOR_CODE["LI_G"]}'
                     f'Проверка технической части для страны {COLOR_CODE["RESET"]}"{ip_county}"{COLOR_CODE["LI_G"]}, прошла успешно!')
             
                 sleep(1.7)
