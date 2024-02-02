@@ -13,6 +13,7 @@ COLOR_CODE = {
     "YELLOW": "\033[93m",    # Желтый
     "RED": "\033[31m",       # Красный
     "CYAN": "\033[36m",      # Светло голубой
+    "BLUE": "\e[1;34m",      # Голубой
     "BOLD": "\033[01m",      # Жирный [Стиль]
     "PINK": "\033[95m",      # Розовое
     "URL_L": "\033[36m",     # Ссылки [Стиль]
@@ -22,12 +23,12 @@ COLOR_CODE = {
 
 # Глоб. софт информация
 GLOBAL_SOFT_INFO = {
-    "AUTHOR": "FELIX4",
-    "AUTHOR_LINK": "t.me/FELIX4",
+    "AUTHOR": "SILENT",
+    "AUTHOR_LINK": "t.me/donttrydeanonme",
     "NOLACK_AUTO_BOT": "https://t.me/noblackAuto_bot",
     "NOLACK_AUTO_SITE": "https://noblack-auto.ru",
     "SOFT_ORIGINAL_LINK": "https://github.com/DataSC3/noblack-mail.git",
-    "SOFT_ORIGINAL_CHANNEL": "https://t.me/noblack_channel",
+    "SOFT_ORIGINAL_CHANNEL": "https://t.me/silentdox",
     "SOFT_VERSION": "1.0.6",
     "BLOCKED_COUNTRIES": ["Ukraine"]}
 
@@ -46,9 +47,13 @@ def console_clear() -> None:
 def print_banner() -> None:
     """Ввод баннера"""
     console_clear()
-    print(F'{COLOR_CODE["RED"]}*–––––––––––––––––––––––————————*')
-    print(COLOR_CODE["RED"]+ "█▄▄ █   █▀█ █▀▀ █▄▀ █▀▄▀█ █▀█ █ █")
-    print(COLOR_CODE["GREEN"] + "█▄█ █▄▄ █▀█ █▄▄ █ █ █ ▀ █ █▀█ █ █▄▄" + COLOR_CODE["RESET"])
+    print(F'{COLOR_CODE["BLUE"]}*–––––––––––––––––––––––————————*')
+    print(COLOR_CODE["CYAN"]+ "███████╗██╗██╗     ███████╗███╗   ██╗████████╗")
+    print(COLOR_CODE["BLUE"]+ "██╔════╝██║██║     ██╔════╝████╗  ██║╚══██╔══╝")
+    print(COLOR_CODE["CYAN"]+ "███████╗██║██║     █████╗  ██╔██╗ ██║   ██║   ")
+    print(COLOR_CODE["BLUE"]+ "╚════██║██║██║     ██╔══╝  ██║╚██╗██║   ██║   ")
+    print(COLOR_CODE["CYAN"]+ "███████║██║███████╗███████╗██║ ╚████║   ██║   ")
+    print(COLOR_CODE["BLUE"] + "╚══════╝╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝" + COLOR_CODE["RESET"])
     print(F'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}\n* Разработчик: {COLOR_CODE["RESET"]}{COLOR_CODE["LI_G"]}{GLOBAL_SOFT_INFO["AUTHOR"]}{COLOR_CODE["RESET"]}')
     print(F'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}* Мы в Телеграме: {COLOR_CODE["RESET"]}{COLOR_CODE["LI_G"]}{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_CHANNEL"]}{COLOR_CODE["RESET"]}')
     print(F'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}* Оригинальная ссылка: {COLOR_CODE["RESET"]}{COLOR_CODE["LI_G"]}{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_LINK"]}{COLOR_CODE["RESET"]}')
@@ -63,18 +68,18 @@ def print_welcome_text() -> None:
         agreement_file_name: str = "src/.Соглашение"
         with open(agreement_file_name, encoding="UTF-8") as file:
 
-            print(F'{COLOR_CODE["RED"]}*–––––––––––––––––––––––————————*')
+            print(F'{COLOR_CODE["BLUE"]}*–––––––––––––––––––––––————————*')
             print(F'{COLOR_CODE["LI_G"]}{file.read()}')
-            print(F'{COLOR_CODE["RED"]}*–––––––––––––––––––––––————————*')
+            print(F'{COLOR_CODE["BLUE"]}*–––––––––––––––––––––––————————*')
 
 
             try: os.remove(agreement_file_name)
             except PermissionError: 
-                print(F'{COLOR_CODE["RED"]}[!] К сожалению, не получилось удалить файл, содержащий пользовательское соглашение. {COLOR_CODE["LI_G"]}Этот баннер будет появляться при каждом запуске.')
+                print(F'{COLOR_CODE["BLUE"]}[!] К сожалению, не получилось удалить файл, содержащий пользовательское соглашение. {COLOR_CODE["LI_G"]}Этот баннер будет появляться при каждом запуске.')
                 
-            input(f'\n{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["RED"]}!{COLOR_CODE["CYAN"]}] {COLOR_CODE["LI_G"]}' + 
+            input(f'\n{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["CYAN"]}!{COLOR_CODE["BLUE"]}] {COLOR_CODE["LI_G"]}' + 
                 f'Чтобы принять соглашение, нажмите{COLOR_CODE["DARK"]} {COLOR_CODE["RESET"]}ENTER ')        
     
     except FileNotFoundError: ...
     except KeyboardInterrupt:
-        print(f'\n{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}Вынужденная остановка работы! {COLOR_CODE["RESET"]}\n')
+        print(f'\n{COLOR_CODE["BLUE"]}[!] {COLOR_CODE["CYAN"]}Вынужденная остановка работы! {COLOR_CODE["RESET"]}\n')
