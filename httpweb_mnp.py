@@ -48,26 +48,26 @@ class HttpWebMnp:
 
         try:
             console_clear()
-            _user_number: str = input(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["RED"]}2{COLOR_CODE["CYAN"]}] {COLOR_CODE["LI_G"]}' + 
+            _user_number: str = input(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["CYAN"]}2{COLOR_CODE["BLUE"]}] {COLOR_CODE["LI_G"]}' + 
                 f'Введите номер телефона: {COLOR_CODE["RESET"]}').strip()
             
             # Если ввели номер телефона
             if _user_number:
-                print(f'{COLOR_CODE["RED"]}[~] {COLOR_CODE["YELLOW"]}Поиск данных.. {COLOR_CODE["RESET"]}\n')
+                print(f'{COLOR_CODE["BLUE"]}[~] {COLOR_CODE["CYAN"]}Поиск данных.. {COLOR_CODE["RESET"]}\n')
                 _get_user_mnp_data = self.__get_mnp_data(user_number=_user_number)
                 
                 # Проверка статуса ошибки
                 if _get_user_mnp_data.get("limit") <= 0:
-                    print(f'\n{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}[!] '+
+                    print(f'\n{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[!] '+
                         f'{COLOR_CODE["RESET"]}К сожалению, вы израсходовали {COLOR_CODE["DARK"]}все лимиты')
                     
-                    print(f'{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}[+] '+
+                    print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[+] '+
                         f'{COLOR_CODE["RESET"]}Всего лимитов: {COLOR_CODE["DARK"]}'+
                         f'{str(_get_user_mnp_data.get("limit", self.__not_found_text))}{COLOR_CODE["RESET"]}')
                 
                 # Проверка статуса ошибки
                 elif _get_user_mnp_data.get("status_error") or _get_user_mnp_data.get("error"):
-                    print(f'{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}Данные не найдены {COLOR_CODE["RESET"]}\n')
+                    print(f'{COLOR_CODE["BLUE"]}[!] {COLOR_CODE["CYAN"]}Данные не найдены {COLOR_CODE["RESET"]}\n')
 
                 # Ввод данных о номере
                 else:
@@ -77,50 +77,50 @@ class HttpWebMnp:
                     
 
                     # Код страны            
-                    print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[+] '+
+                    print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[+] '+
                         f'{COLOR_CODE["LI_G"]}Код страны:{COLOR_CODE["F_CL"]} '+
                         f'{str(_mnp_data_region.get("country", self.__not_found_text))}{COLOR_CODE["RESET"]}')
 
                     # Город
-                    print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[+] '+
+                    print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[+] '+
                         f'{COLOR_CODE["LI_G"]}Город регистрации:{COLOR_CODE["F_CL"]} '+
                         f'{_mnp_data_city}{COLOR_CODE["RESET"]}')
 
                     # Оператор
-                    print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[+] '+
+                    print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[+] '+
                         f'{COLOR_CODE["LI_G"]}Оператор:{COLOR_CODE["F_CL"]} '+
                         f'{_mnp_data_operator.get("brand", self.__not_found_text)}{COLOR_CODE["DARK"]} '+
                             f'({_mnp_data_operator.get("name", self.__not_found_text)}, '+
                             f'{_mnp_data_operator.get("url", self.__not_found_text)}){COLOR_CODE["RESET"]}')
 
                     # Местоположение
-                    print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[+] '+
+                    print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[+] '+
                         f'{COLOR_CODE["LI_G"]}Местоположение:{COLOR_CODE["F_CL"]} '+
                         f'{_mnp_data_region.get("name", self.__not_found_text)}{COLOR_CODE["DARK"]} '+
                         f'({_mnp_data_region.get("okrug", self.__not_found_text)}){COLOR_CODE["RESET"]}')
 
                     # Автомобильные коды
-                    print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[+] '+
+                    print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[+] '+
                         f'{COLOR_CODE["LI_G"]}Автомобильные коды:{COLOR_CODE["F_CL"]} '+
                         f'{_mnp_data_region.get("autocod", self.__not_found_text)}{COLOR_CODE["RESET"]}')
 
                     # Об операторе
-                    print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[+] '+
+                    print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[+] '+
                         f'{COLOR_CODE["LI_G"]}Об операторе:{COLOR_CODE["F_CL"]} '+
                         f'{_mnp_data_region.get("wiki", self.__not_found_text)}{COLOR_CODE["RESET"]}')
             
                     # Всего лимитов
-                    print(f'\n{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[+] '+
+                    print(f'\n{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[+] '+
                         f'{COLOR_CODE["RED"]}Всего лимитов: '+
                         f'{str(_get_user_mnp_data.get("limit", self.__not_found_text))}{COLOR_CODE["RESET"]}')
 
-                    input(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["RED"]}!{COLOR_CODE["CYAN"]}] {COLOR_CODE["LI_G"]}' + 
+                    input(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["BLUE"]}!{COLOR_CODE["CYAN"]}] {COLOR_CODE["LI_G"]}' + 
                         f'Чтобы завершить поиск, нажмите{COLOR_CODE["DARK"]} {COLOR_CODE["RESET"]}ENTER ')
 
             # Если не ввели номер телефона
             else:
-                print(f'{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}Ошибка, введите номер телефона! {COLOR_CODE["RESET"]}\n')
+                print(f'{COLOR_CODE["BLUE"]}[!] {COLOR_CODE["CYAN"]}Ошибка, введите номер телефона! {COLOR_CODE["RESET"]}\n')
 
         except KeyboardInterrupt:
-            print(f'\n{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}Вынужденная остановка работы! {COLOR_CODE["RESET"]}\n')
+            print(f'\n{COLOR_CODE["BLUE"]}[!] {COLOR_CODE["CYAN"]}Вынужденная остановка работы! {COLOR_CODE["RESET"]}\n')
 
