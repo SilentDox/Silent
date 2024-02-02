@@ -1,6 +1,6 @@
 # -*- coding UTF-8 -*-
 # КОММАНДА: Silent
-# АВТОР: Silent
+# АВТОР: SilentDOX
 
 
 try:
