@@ -1,7 +1,6 @@
 # -*- coding UTF-8 -*-
 # ИНФОРМАЦИЯ БЫЛА ПОЛУЧЕНА ОТ PHONERADAR.RU
-# NOBLACK-MAIL НИКАК НЕ УЧАСТВУЕТ В СОХРАНЕНИИ ПОЛЬЗОВАТЕЛЬСКИХ ДАННЫХ!.
-# DATE: Вторник, 18 Апреля 2023 г. 03:39:15 (+03)
+# SILENT НИКАК НЕ УЧАСТВУЕТ В СОХРАНЕНИИ ПОЛЬЗОВАТЕЛЬСКИХ ДАННЫХ!.
 
 import requests 
 from bs4 import BeautifulSoup as bs
@@ -9,7 +8,7 @@ from functools import lru_cache
 
 class PhoneRadar:
     """Информация получаемая с сайта phoneradar.ru никак\n
-    не синхронизирован/связан с noblack-mail а так-же с noblack.command.
+    не синхронизирован/связан с silent а так-же с silentDOX.
     :param: `user_number` - Номер телефона."""
     
     def __init__(self, user_number: str) -> None:
