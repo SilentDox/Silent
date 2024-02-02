@@ -1,8 +1,6 @@
 # -*- coding UTF-8 -*-
-# КОММАНДА: noblack.command
-# НОВОСТИ: t.me/noblack_channel
-# АВТОР: FELIX4
-# DATE: Вторник, 18 Апреля 2023 г. 03:39:15 (+03)
+# КОММАНДА: Silent
+# АВТОР: Silent
 
 
 try:
@@ -20,17 +18,17 @@ try:
 
 except ImportError:
     # Совет по установке модулей и выход
-    print(f'\n{COLOR_CODE["RED"]}{COLOR_CODE["BOLD"]}[!] {COLOR_CODE["DARK"]}ВНИМАНИЕ У ВАС ПРОБЛЕМКА, НО МЫ ЕГО РЕШИМ!{COLOR_CODE["RESET"]}')
+    print(f'\n{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[!] {COLOR_CODE["CYAN"]}ВНИМАНИЕ У ВАС ПРОБЛЕМКА, НО МЫ ЕГО РЕШИМ!{COLOR_CODE["RESET"]}')
 
-    print(f'{COLOR_CODE["RED"]}[+] {COLOR_CODE["YELLOW"]}Оригинально программное обеспечение находиться на: '+
+    print(f'{COLOR_CODE["BLUE"]}[+] {COLOR_CODE["CYAN"]}Оригинально программное обеспечение находиться на: '+
          f'{COLOR_CODE["CYAN"]}{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_LINK"]}{COLOR_CODE["RESET"]}\n'+
-         f'{COLOR_CODE["RED"]}[+] {COLOR_CODE["YELLOW"]}'+
+         f'{COLOR_CODE["BLUE"]}[+] {COLOR_CODE["CYAN"]}'+
          f'Мы в телеграмме: {COLOR_CODE["CYAN"]}{GLOBAL_SOFT_INFO["SOFT_ORIGINAL_CHANNEL"]}{COLOR_CODE["RESET"]}')
     
-    exit(f'\n{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}У вас отсутствует модули: '+
-         f'{COLOR_CODE["CYAN"]}requests{COLOR_CODE["RESET"]} и/или {COLOR_CODE["CYAN"]}'+
-         f'bs4{COLOR_CODE["RESET"]}. {COLOR_CODE["RED"]}\n[*] {COLOR_CODE["YELLOW"]}'+
-         f'Напишите в терминал/консоль: {COLOR_CODE["GREEN"]}apt-get install python3-pip && pip3 install requests bs4{COLOR_CODE["RESET"]}')
+    exit(f'\n{COLOR_CODE["BLUE"]}[!] {COLOR_CODE["CYAN"]}У вас отсутствует модули: '+
+         f'{COLOR_CODE["BLUE"]}requests{COLOR_CODE["RESET"]} и/или {COLOR_CODE["CYAN"]}'+
+         f'bs4{COLOR_CODE["RESET"]}. {COLOR_CODE["BLUE"]}\n[*] {COLOR_CODE["CYAN"]}'+
+         f'Напишите в терминал/консоль: {COLOR_CODE["RED"]}apt-get install python3-pip && pip3 install requests bs4{COLOR_CODE["RESET"]}')
 
 
 if __name__ == "__main__":
@@ -42,25 +40,25 @@ if __name__ == "__main__":
         print_banner()
 
         # Меню управления
-        print(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[1] {COLOR_CODE["LI_G"]}'
+        print(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[1] {COLOR_CODE["LI_G"]}'
             f'Проверить {COLOR_CODE["RED"]}Номер{COLOR_CODE["LI_G"]} телефона.{COLOR_CODE["RESET"]}\n'
             
-            f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[2] {COLOR_CODE["LI_G"]}'
+            f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[2] {COLOR_CODE["LI_G"]}'
             f'Проверить {COLOR_CODE["RED"]}MNP{COLOR_CODE["LI_G"]} телефона.{COLOR_CODE["RESET"]}\n'
             
-            f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[3] {COLOR_CODE["LI_G"]}'
+            f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[3] {COLOR_CODE["LI_G"]}'
             f'Проверить {COLOR_CODE["RED"]}IP{COLOR_CODE["LI_G"]} телефона.{COLOR_CODE["RESET"]}\n'
 
-            f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[4] {COLOR_CODE["LI_G"]}'
+            f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[4] {COLOR_CODE["LI_G"]}'
             f'Проверить {COLOR_CODE["RED"]}Гос. номер{COLOR_CODE["LI_G"]} автомобиля.{COLOR_CODE["RESET"]}\n'
             
-            f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[5] {COLOR_CODE["LI_G"]}'
+            f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[5] {COLOR_CODE["LI_G"]}'
             f'Провести техническую проверку {COLOR_CODE["RED"]}на работоспосбность сервиса.{COLOR_CODE["LI_G"]}{COLOR_CODE["RESET"]}\n')
 
         try:
         
             # Выбор варианта поиска
-            user_chooice: str = input(f'{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[–] {COLOR_CODE["LI_G"]}'
+            user_chooice: str = input(f'{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[–] {COLOR_CODE["LI_G"]}'
                 f'Выберите вариант поиска: {COLOR_CODE["RESET"]}').strip()
             
             # Поиск по номеру телефона
@@ -93,12 +91,12 @@ if __name__ == "__main__":
                 # Проверка обновлении
                 Update().get()
                 
-                input(f'\n{COLOR_CODE["CYAN"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["RED"]}!{COLOR_CODE["CYAN"]}] {COLOR_CODE["LI_G"]}' + 
+                input(f'\n{COLOR_CODE["BLUE"]}{COLOR_CODE["BOLD"]}[{COLOR_CODE["RED"]}!{COLOR_CODE["CYAN"]}] {COLOR_CODE["LI_G"]}' + 
                   f'Чтобы вернуться назад, нажмите{COLOR_CODE["DARK"]} {COLOR_CODE["RESET"]}ENTER ')
 
             # Повторный опрос
             else: continue
 
         except KeyboardInterrupt:
-            print(f'\n{COLOR_CODE["RED"]}[!] {COLOR_CODE["YELLOW"]}Вынужденная остановка работы! {COLOR_CODE["RESET"]}\n')
+            print(f'\n{COLOR_CODE["BLUE"]}[!] {COLOR_CODE["CYAN"]}Вынужденная остановка работы! {COLOR_CODE["RESET"]}\n')
             break
