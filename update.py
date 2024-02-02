@@ -1,7 +1,6 @@
 # -*- coding UTF-8 -*-
 # ИНФОРМАЦИЯ БЫЛА ПОЛУЧЕНА ОТ HTMLWEB.RU
-# NOBLACK-MAIL НИКАК НЕ УЧАСТВУЕТ В СОХРАНЕНИИ ПОЛЬЗОВАТЕЛЬСКИХ ДАННЫХ!.
-# DATE: Вторник, 18 Апреля 2023 г. 03:39:15 (+03)
+# SILENT НИКАК НЕ УЧАСТВУЕТ В СОХРАНЕНИИ ПОЛЬЗОВАТЕЛЬСКИХ ДАННЫХ!.
 
 import requests
 from ..config import GLOBAL_SOFT_INFO, COLOR_CODE
