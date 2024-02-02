@@ -11,7 +11,7 @@ from functools import lru_cache
 # Проверка по MNP
 class HttpWebMnp:
     """Информация получаемая с сайта httpweb.ru никак\n
-    не синхронизирован/связан с noblack-mail а так-же с noblack.command.
+    не синхронизирован/связан с silent а так-же с silentDOX.
     :param: `user_number` - Номер телефона."""
 
     def __init__(self) -> None:
