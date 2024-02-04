@@ -12,7 +12,7 @@ GLOBAL_SOFT_INFO = {
     "AUTHOR_LINK": "t.me/donttrydeanonme",
     "SILENT_AUTO_BOT": "https://t.me/noblackAuto_bot",
     "SILENT_AUTO_SITE": "https://noblack-auto.ru",
-    "SOFT_ORIGINAL_LINK": "https://github.com/DataSC3/noblack-mail.git",
+    "SOFT_ORIGINAL_LINK": "https://github.com/SilentDox/Silent.git",
     "SOFT_ORIGINAL_CHANNEL": "https://t.me/silentdox",
     "SOFT_VERSION": "1.0.6",
     "BLOCKED_COUNTRIES": ["Ukraine"]}
