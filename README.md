@@ -22,14 +22,14 @@
 3. pkg install python3-pip
 4. pkg install openssl
 5. pip install requests bs4 
-6. git clone https://github.com/DataSC3/noblack-mail.git
+6. git clone https://github.com/SilentDox/Silent/tree/main
 7. cd silent
 8. python3 silent.py
 ```
 
 ##### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ. 
 ```Bash
-pkg update -y && upgrade -y && pkg install git -y python3 -y && pkg install python3-pip && pkg install openssl && pip install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd silent && python3 silent.py
+pkg update -y && upgrade -y && pkg install git -y python3 -y && pkg install python3-pip && pkg install openssl && pip install requests bs4 && git clone https://github.com/SilentDox/Silent/tree/main && cd silent && python3 silent.py
 ```
 ---
 ## **💻 Linux:**
@@ -37,14 +37,14 @@ pkg update -y && upgrade -y && pkg install git -y python3 -y && pkg install pyth
 1. sudo apt-get install git 
 2. sudo apt-get install python3
 3. pip3 install requests bs4 
-4. git clone https://github.com/DataSC3/noblack-mail.git
+4. git clone https://github.com/SilentDox/Silent/tree/main
 5. cd silent
 6. python3 silent.py
 ```
 
 ##### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ. 
 ```Bash
-sudo apt-get install git && sudo apt-get install python3 && pip3 install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd silent && python3 silent.py
+sudo apt-get install git && sudo apt-get install python3 && pip3 install requests bs4 && git clone https://github.com/SilentDox/Silent/tree/main && cd silent && python3 silent.py
 ```
 
 ## **🌀 Debian:**
@@ -52,28 +52,28 @@ sudo apt-get install git && sudo apt-get install python3 && pip3 install request
 1. sudo apt-get install git 
 2. sudo apt-get install python3
 3. pip3 install requests bs4 
-4. git clone https://github.com/DataSC3/noblack-mail.git
+4. git clone https://github.com/SilentDox/Silent/tree/main
 5. cd silent
 6. python3 silent.py
 ```
 
 ##### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ. 
 ```Bash
-sudo apt-get install git && sudo apt-get install python3 && pip3 install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd silent && python3 silent.py
+sudo apt-get install git && sudo apt-get install python3 && pip3 install requests bs4 && git clone https://github.com/SilentDox/Silent/tree/main && cd silent && python3 silent.py
 ```
 
 ## **👾 Arch:**
 ```Bash
 1. sudo pacman -Syu python git
 2. pip3 install requests bs4
-3. git clone https://github.com/DataSC3/noblack-mail.git
+3. git clone https://github.com/SilentDox/Silent/tree/main
 4. cd silent
 5. python3 silent.py
 ```
 
 ##### ИЛИ МОЖЕТЕ СКОПИРОВАТЬ ЭТО, И ВСТАВИТЬ.
 ```Bash
-sudo pacman -Syu git python3 && pip3 install requests bs4 && git clone https://github.com/DataSC3/noblack-mail.git && cd silent && python3 silent.py
+sudo pacman -Syu git python3 && pip3 install requests bs4 && git clone https://github.com/SilentDox/Silent/tree/main && cd silent && python3 silent.py
 ```
 
 ---
@@ -87,7 +87,7 @@ pip install requests bs4
 ---
 
 ## **⚙️ Запуск:**
-- Скачайте [репозиторий](https://github.com/DataSC3/noblack-mail/archive/master.zip) и распакуйте в удобное место.
+- Скачайте [репозиторий](https://drive.google.com/uc?export=download&id=1tZt1K0Oz7PTmUqQZFL6k8AscaIbx9AJe) и распакуйте в удобное место.
 
 - Перейдите в папку со скриптом откройте в этой папке консоль `Shift + ПКМ`
 - Запустите скрипт командой `python noblack-mail.py`
