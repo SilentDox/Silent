@@ -15,7 +15,7 @@
     —— LICENSE
 
 ## **⚙️ Запуск Windows(cmd):**
-- Скачайте [репозиторий](https://drive.google.com/uc?export=download&id=1tZt1K0Oz7PTmUqQZFL6k8AscaIbx9AJe) и распакуйте в удобное место.
+- Скачайте [репозиторий](https://drive.google.com/uc?export=download&id=1WJdKX5gnh14Xm8GZNYr_EOVIy9_CGYlF) и распакуйте в удобное место.
 
 - Перейдите в папку со скриптом откройте в этой папке консоль `Shift + ПКМ`
 - Запустите скрипт командой `python noblack-mail.py`
