@@ -18,4 +18,4 @@
 - Скачайте [репозиторий](https://drive.google.com/uc?export=download&id=1WJdKX5gnh14Xm8GZNYr_EOVIy9_CGYlF) и распакуйте в удобное место.
 
 - Перейдите в папку со скриптом откройте в этой папке консоль `Shift + ПКМ`
-- Запустите скрипт командой `python noblack-mail.py`
+- Запустите скрипт командой `python silent.py`
